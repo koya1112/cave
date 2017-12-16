@@ -11,7 +11,7 @@ SCREEN_SIZE = (800, 600)
 pygame.init()
 pygame.key.set_repeat(5, 5)
 SURFACE = pygame.display.set_mode(SCREEN_SIZE)
-pygame.display.set_caption("image\scroll game")
+pygame.display.set_caption("scroll game")
 FPSCLOCK = pygame.time.Clock()
 
 # 透明色を指定したイメージを作成する関数
@@ -70,6 +70,10 @@ def main():
                 if event.key == K_SPACE:
                     start_key = False
 
+    # BGMを再生
+    pygame.mixer.music.load("music\bgm2.mp3")
+    pygame.mixer.music.play(-1) # 引数-1でループ再生
+    
     while True:
         is_space_down = False
         for event in pygame.event.get():
