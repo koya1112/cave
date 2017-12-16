@@ -1,0 +1,10 @@
+BGM
+[bgm1.mp3]
+”F¯‚Ì¢ŠE‚Ì—ŒJdŠ|.mp3	written by ‚ä[‚¬‚è‚µ‚®‚êB
+https://dova-s.jp/bgm/play8210.html
+
+
+SE
+[se1.wav]
+‘å–C2
+https://soundeffect-lab.info/sound/battle/battle2.html
