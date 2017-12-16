@@ -1,4 +1,4 @@
-sr/bin/env python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 import sys #package sys contains vars and functions which interpreter manages
