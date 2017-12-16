@@ -1,0 +1,13 @@
+BGM
+[bgm1.mp3]
+認識の世界の絡繰仕掛.mp3	written by ゆーぎりしぐれ。
+https://dova-s.jp/bgm/play8210.html
+
+[bgm2.mp3]
+駆けるよ駆けるよ	written by ゆーぎりしぐれ。
+https://dova-s.jp/bgm/play8215.html
+
+SE
+[se1.mp3]
+大砲2
+https://soundeffect-lab.info/sound/battle/battle2.html
