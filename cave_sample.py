@@ -42,11 +42,11 @@ def main():
     sysfont = pygame.font.SysFont(None, 36)
     
     # 画像の設定
-    ship_image, ship_rect = load_image("image\ship.png", colorkey=-1)
-    bang_image, bang_rect = load_image("image\bang.png", colorkey=-1)
+    ship_image, ship_rect = load_image("image\\ship.png", colorkey=-1)
+    bang_image, bang_rect = load_image("image\\bang.png", colorkey=-1)
 
     # SEをロード
-    hit_sound = pygame.mixer.Sound("music\se1.wav")
+    hit_sound = pygame.mixer.Sound("music\\se1.wav")
 
     holes = []
     for xpos in range(walls):
@@ -54,7 +54,7 @@ def main():
     game_over = False
 
     # BGMを再生
-    pygame.mixer.music.load("music\bgm1.mp3")
+    pygame.mixer.music.load("music\\bgm1.mp3")
     pygame.mixer.music.play(-1) # 引数-1でループ再生
 
     # game_start
@@ -71,7 +71,7 @@ def main():
                     start_key = False
 
     # BGMを再生
-    pygame.mixer.music.load("music\bgm2.mp3")
+    pygame.mixer.music.load("music\\bgm2.mp3")
     pygame.mixer.music.play(-1) # 引数-1でループ再生
     
     while True:
