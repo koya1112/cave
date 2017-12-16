@@ -11,7 +11,7 @@ SCREEN_SIZE = (800, 600)
 pygame.init()
 pygame.key.set_repeat(5, 5)
 SURFACE = pygame.display.set_mode(SCREEN_SIZE)
-pygame.display.set_caption("scroll game")
+pygame.display.set_caption("image\scroll game")
 FPSCLOCK = pygame.time.Clock()
 
 # 透明色を指定したイメージを作成する関数
@@ -42,13 +42,20 @@ def main():
     sysfont = pygame.font.SysFont(None, 36)
     
     # 画像の設定
-    ship_image, ship_rect = load_image("ship.png", colorkey=-1)
-    bang_image, bang_rect = load_image("bang.png", colorkey=-1)
+    ship_image, ship_rect = load_image("image\ship.png", colorkey=-1)
+    bang_image, bang_rect = load_image("image\bang.png", colorkey=-1)
+
+    # SEをロード
+    hit_sound = pygame.mixer.Sound("music\se1.wav")
 
     holes = []
     for xpos in range(walls):
         holes.append(Rect(xpos * 10, 100, 10, 400))
     game_over = False
+
+    # BGMを再生
+    pygame.mixer.music.load("music\bgm1.mp3")
+    pygame.mixer.music.play(-1) # 引数-1でループ再生
 
     # game_start
     start_key = True
@@ -98,6 +105,8 @@ def main():
             if holes[0].top > ship_y or \
                holes[0].bottom < ship_y + 80:
                game_over = True
+               pygame.mixer.music.stop() # BGMを停止
+               hit_sound.play()  # SEを再生
 
             # render the surface
             SURFACE.fill((0, 255, 0))
